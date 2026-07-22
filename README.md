@@ -9,9 +9,9 @@ Este projeto demonstra a implementação de uma infraestrutura moderna de **Inte
 
 A solução foi projetada de forma distribuída em ambiente Linux, segmentando responsabilidades entre instâncias dedicadas:
 
-* **Servidor Controlador / CI-CD (`pipeline` - 192.168.18.56):** Instância dedicada ao serviço **Jenkins**, responsável pela execução de tarefas de automação, clone do código fonte e orquestração de deploy via SSH.
-* **Servidor de Aplicação (`aplicacao` - 192.168.18.57):** Host de destino onde o ambiente **Docker Engine** executa a aplicação web contêinerizada.
-* **Servidor de Observabilidade (`zabbix` - 192.168.18.55):** Servidor central **Zabbix 7.0 Server** coletando métricas de infraestrutura e contêineres em tempo real.
+* **Servidor Controlador / CI-CD (`pipeline` - IP):** Instância dedicada ao serviço **Jenkins**, responsável pela execução de tarefas de automação, clone do código fonte e orquestração de deploy via SSH.
+* **Servidor de Aplicação (`aplicacao` - IP):** Host de destino onde o ambiente **Docker Engine** executa a aplicação web contêinerizada.
+* **Servidor de Observabilidade (`zabbix` - IP):** Servidor central **Zabbix 7.0 Server** coletando métricas de infraestrutura e contêineres em tempo real.
 
 ---
 
