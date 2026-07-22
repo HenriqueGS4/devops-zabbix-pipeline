@@ -1,4 +1,3 @@
-cat << 'EOF' > Jenkinsfile
 pipeline {
     agent any
 
@@ -19,7 +18,7 @@ pipeline {
                 script {
                     sh '''
                         ssh -o StrictHostKeyChecking=no henrique@192.168.18.57 "
-                            cd /home/henrique/projeto_automacao/piloto_app
+                            cd /home/henrique/app
                             docker stop app-piloto 2>/dev/null || true
                             docker rm app-piloto 2>/dev/null || true
                             docker build -t app-piloto:v1 .
@@ -31,4 +30,3 @@ pipeline {
         }
     }
 }
-EOF
